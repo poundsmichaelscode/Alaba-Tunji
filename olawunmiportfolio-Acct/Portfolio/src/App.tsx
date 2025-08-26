@@ -1,14 +1,15 @@
-import React, { useEffect, useMemo, useState } from "react";
+import  { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Mail, FileDown, Sun, Moon, Phone, MapPin, Briefcase, School, CheckCircle } from "lucide-react";
 
 // ======== CONFIG ========
-const RESUME_URL = "../src/assets/AlabaTunji_Taiwo_CV.pdf"; // update if hosted elsewhere
+const RESUME_URL = "/AlabaTunji_Taiwo_CV.pdf"; // update if hosted elsewhere
 const EMAIL_TO = "alatundor1@gmail.com";
 const PHONE_NO = "09051273307";
 const ADDRESS = "9, Okanlawon Street, Otubu, Agege, Lagos";
+const PROFILE_IMG = "/WhatsApp Image 2025-01-16 at 08.56.44.jpeg";
 
-export default function AccountantPortfolio(): JSX.Element {
+export default function AccountantPortfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dark, setDark] = useState<boolean>(() => {
     if (typeof window === "undefined") return false;
@@ -228,7 +229,7 @@ export default function AccountantPortfolio(): JSX.Element {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden ring-8 ring-emerald-500/20 shadow-2xl">
-              <img src="../src/assets/WhatsApp Image 2025-01-16 at 08.56.44.jpeg" alt="Headshot of Alaba‑Tunji Taiwo" className="object-cover w-full h-full" />
+              <img src={PROFILE_IMG} alt="Headshot of Alaba‑Tunji Taiwo" className="object-cover w-full h-full" />
             </div>
           </motion.div>
         </div>
